@@ -9,9 +9,13 @@
   "author": "Karianne",
   "license": "ISC",
   "devDependencies": {
+    "fs": "0.0.2",
+    "handlebars": "^4.0.5",
     "harmonize": "^1.4.4",
     "metalsmith": "^2.1.0",
+    "metalsmith-collections": "^0.7.0",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-permalinks": "^0.4.0",
     "metalsmith-serve": "0.0.6",
     "metalsmith-templates": "^0.7.0",
     "metalsmith-watch": "^1.0.1",

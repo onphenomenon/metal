@@ -4,20 +4,45 @@ var Metalsmith = require('metalsmith'),
 	watch = require('metalsmith-watch'),
 	templates = require('metalsmith-templates'),
  	moment = require('moment'),
-	harmony = require('harmonize')();
+	harmony = require('harmonize')(),
+	Handlebars = require('handlebars'),
+	collections = require('metalsmith-collections'),
+    permalinks  = require('metalsmith-permalinks'),
+	fs = require('fs');
+
+Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
+Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
+
+var plugin = function(files, metalsmith, done) {
+    console.log(files);
+    done();
+};
 
 Metalsmith(__dirname)
+ .use(plugin)
+  .use(collections({
+	 pages: {
+		 pattern: 'content/pages/*.md'
+	 },
+	 posts: {
+        pattern: 'content/posts/*.md',
+        sortBy: 'date',
+        reverse: true
+    }
+  }))
   .metadata({
     site: {
       title: 'karianne.org',
       url: 'https://karianne.org'
     }
   })
-  .source('./src')
-  .destination('./build')
+
   .use(markdown())
+  .use(permalinks({
+	  pattern: ':collection/:title'
+  }))
   .use(templates({
-	  engine: 'jade',
+	  engine: 'handlebars',
 	  moment: moment
   }))
 	.use(serve({
@@ -28,6 +53,8 @@ Metalsmith(__dirname)
 	  pattern: '**/*',
 	  livereload: true
 	}))
+
+    .destination('./build')
   // build plugins go here
   .build(function (err) {
     if (err) {
