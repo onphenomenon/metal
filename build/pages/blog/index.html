@@ -44,40 +44,37 @@
 <article>
     <ul>
             <li>
-                <h3>Android Mobile</h3>
-                <article>&lt;p&gt;Horizontal to Vertical:
-Width/ Height:&lt;/p&gt;
-&lt;p&gt;Aspect Ratio Media Queries like landscape and portrait are used to test the width of the display. However what if need to target unusual behavior with window resizing?
-Aspect ratios are represented by the horizontal ratio and the vertical ratio, with two numbers like this 4:3, CSS uses 4/3.&lt;/p&gt;
-&lt;p&gt;To test for landscape media, could do the following:
-@media screen and (min-aspect-ratio: 1/1) { /* landscape styles here
-This just means “whenever the width is greater than the height, apply these styles”, width is top number, horizontal.&lt;/p&gt;
-&lt;p&gt;To test for portrait:
-@media screen and (max-aspect-ratio: 1/1) { /* portrait styles here
-Which means “whenever the width is less than the height, apply these styles”, height is bottom number;&lt;/p&gt;
-&lt;p&gt;To test for&lt;/p&gt;
-&lt;p&gt;The media query describes the aspect ratio of the targeted display area of the device/window. If the screen is within the bounds of the denoted ratio, the query will go into effect.&lt;/p&gt;
-&lt;p&gt;@media screen and (min-aspect-ratio: 8/5){…} Describes the aspect ratio of the of the targeted display area.
-@media screen and (min-device-aspect-ratio: 8/5) Describes the physical aspect ratio of the screen itself.&lt;/p&gt;
-&lt;p&gt;If the window aspect is 8:5 or higher, call this css (8:4, 8:3);&lt;/p&gt;
-&lt;p&gt;Issue with Chrome for Android: When the software keyboard is displayed, the browser window is resized, and a window.orientenationchange event in JavaScript, causing CSS media queries to be applied.&lt;/p&gt;
-&lt;p&gt;Web apps with a different layout for portrait and landscape orientation can break when keyboard is displayed. When the keyboard is displayed, Droid can go from 360px wide by 640px tall to 360px by 253px when the keyboard is displayed; This makes the screen size appear to the browser to be slightly square landscape orientation.&lt;/p&gt;
-&lt;p&gt;Now orientation: landscape media queries apply and break the layout.
-We need to capture the weird keyboard edge case:
-The orientation of the Droid screen in portrait orientation when the keyboard displayed is 360 by 253: 1.4, use 13/9&lt;/p&gt;
-&lt;p&gt;For landscape media:&lt;/p&gt;
-&lt;p&gt;@media screen and (min-aspect-ratio: 13/9) { /* landscape styles here &lt;/p&gt;
+                <h3>Angular Filter Directive</h3>
+                <article></article>
+            </li>
+            <li>
+                <h3>Passing Scope with TypeScript</h3>
+                <article></article>
+            </li>
+            <li>
+                <h3>Testing an Angular Directive</h3>
+                <article></article>
+            </li>
+            <li>
+                <h3>Android Mobile Browser</h3>
+                <article>&lt;p&gt;Recently, a nasty Android native bug appeared in our mobile application. Whenever the user tried to enter text and a keyboard popped out, the landscape media queries were triggered, because the browser would automatically resize. Normal landscape and portrait media queries were not sufficient to targeting the behavior of the screen.&lt;/p&gt;
+&lt;p&gt;Media queries like landscape and portrait are used for responsive layouts. The queries test the width of the display. If you need to target unusual behavior with window resizing its helpful to understand the aspect ratios these queries are targeting.&lt;/p&gt;
+&lt;p&gt;Aspect ratios are represented by two numbers in a fraction or separated by a colon. The numerator (top number) is the width or horizontal size, the denominator is the height or vertical size.&lt;/p&gt;
+&lt;p&gt;A landscape aspect ratio tests for a minimum aspect ratio of 1/1, meaning that when the width is greater than the height, landscape styles are applied. The landscape ratio reduces to at least 1.&lt;/p&gt;
+&lt;p&gt;@media screen and (min-aspect-ratio: 1/1) { /* landscape styles here&lt;/p&gt;
+&lt;p&gt;A portrait aspect ratio tests for a maximum aspect ratio of 1/1, meaning that whenever the width is less than the height, portrait style are applied. The portrait ratio reduces to less than 1.&lt;/p&gt;
+&lt;p&gt;@media screen and (max-aspect-ratio: 1/1) { /* portrait styles here&lt;/p&gt;
+&lt;p&gt;Now back to the issue with Chrome for Android. Normal portrait for the Android Moto X (2nd generation) was 360px/556px, or .64. When the keyboard entered, the browser size went to 360px/282px, or 1.27. Thus the landscape styles were applied, as the aspect ratio was greater than 1.&lt;/p&gt;
+&lt;p&gt;To capture this keyboard edge case and maintain portrait styles, we need a higher min-aspect-ratio than 1. 13/9 as an aspect ratio reduces to 1.4, so it should cover the 1.27 edge case.&lt;/p&gt;
+&lt;p&gt;So for landscape media:&lt;/p&gt;
+&lt;p&gt;@media screen and (min-aspect-ratio: 13/9) { /* landscape styles here&lt;/p&gt;
 &lt;p&gt;And for portrait media:&lt;/p&gt;
 &lt;p&gt;@media screen and (max-aspect-ratio: 13/9) { /* portrait styles here&lt;/p&gt;
-&lt;p&gt;&amp;quot;anything that is portrait-to-slightly-landscape gets the portrait styles, anything wider gets landscape styles”.&lt;/p&gt;
-&lt;p&gt;Only shows up when you have highly precise portrait and landscape layout for a website or app which require a text entry in a form field, breaks your layout.&lt;/p&gt;
-&lt;p&gt;Moto X pure edition:
-1440 x 2560 pixels&lt;/p&gt;
-&lt;p&gt;Moto 2nd generation
-1080 x 1920 pixels&lt;/p&gt;
+&lt;p&gt;The Android simulator in Android studio is incredibly slow, thus remote-debugging may be your best option with actual devices on hand:&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://developer.chrome.com/devtools/docs/remote-debugging&quot;&gt;https://developer.chrome.com/devtools/docs/remote-debugging&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sources:&lt;/p&gt;
 &lt;p&gt;&lt;a href&#x3D;&quot;http://robandlauren.com/2014/04/03/aspect-ratio-media-queries/&quot;&gt;http://robandlauren.com/2014/04/03/aspect-ratio-media-queries/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href&#x3D;&quot;http://blog.abouthalf.com/development/orientation-media-query-challenges-in-android-browsers/&quot;&gt;http://blog.abouthalf.com/development/orientation-media-query-challenges-in-android-browsers/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href&#x3D;&quot;https://developer.chrome.com/devtools/docs/remote-debugging&quot;&gt;https://developer.chrome.com/devtools/docs/remote-debugging&lt;/a&gt;&lt;/p&gt;
 </article>
             </li>
     </ul>

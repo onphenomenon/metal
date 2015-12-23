@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Meu Blog</title>
+	<link rel="stylesheet" href="http://localhost:8080/styles/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost:8080/styles/style.css">
+  </head>
+  <body>
+    <header>
+		<!-- Navigation -->
+	    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container-fluid">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Sitename</a>
+				</div>
+				<!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Nav item 1</a></li>
+						<li><a href="#">Nav item 2</a></li>
+						<li><a href="#">Nav item 3</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- /.navbar -->
+
+    </header>
+<!-- Page Content -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="page-header">
+					<h1>Android Mobile Browser</h1>
+					<p>Posted by <span class="glyphicon glyphicon-user"></span> <a href="#">Karianne Burns</a> on <span class="glyphicon glyphicon-time"></span> 12 January 2015 10:00 am</p>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- /.row -->
+
+		<div class="row">
+			<div class="col-sm-8">
+
+				<!-- Image -->
+				<figure class="margin-b-2">
+					<img class="img-responsive" src="http://localhost:8080/images/Headache.jpg" alt="">
+					<figcaption class="margin-t-h">Dealing with mobile native browser issues.</figcaption>
+				</figure>
+
+				<p class="lead"><p>Recently, a nasty Android native bug appeared in our mobile application. Whenever the user tried to enter text and a keyboard popped out, the landscape media queries were triggered, because the browser would automatically resize. Normal landscape and portrait media queries were not sufficient to targeting the behavior of the screen.</p>
+<p>Media queries like landscape and portrait are used for responsive layouts. The queries test the width of the display. If you need to target unusual behavior with window resizing its helpful to understand the aspect ratios these queries are targeting.</p>
+<p>Aspect ratios are represented by two numbers in a fraction or separated by a colon. The numerator (top number) is the width or horizontal size, the denominator is the height or vertical size.</p>
+<p>A landscape aspect ratio tests for a minimum aspect ratio of 1/1, meaning that when the width is greater than the height, landscape styles are applied. The landscape ratio reduces to at least 1.</p>
+<p>@media screen and (min-aspect-ratio: 1/1) { /* landscape styles here</p>
+<p>A portrait aspect ratio tests for a maximum aspect ratio of 1/1, meaning that whenever the width is less than the height, portrait style are applied. The portrait ratio reduces to less than 1.</p>
+<p>@media screen and (max-aspect-ratio: 1/1) { /* portrait styles here</p>
+<p>Now back to the issue with Chrome for Android. Normal portrait for the Android Moto X (2nd generation) was 360px/556px, or .64. When the keyboard entered, the browser size went to 360px/282px, or 1.27. Thus the landscape styles were applied, as the aspect ratio was greater than 1.</p>
+<p>To capture this keyboard edge case and maintain portrait styles, we need a higher min-aspect-ratio than 1. 13/9 as an aspect ratio reduces to 1.4, so it should cover the 1.27 edge case.</p>
+<p>So for landscape media:</p>
+<p>@media screen and (min-aspect-ratio: 13/9) { /* landscape styles here</p>
+<p>And for portrait media:</p>
+<p>@media screen and (max-aspect-ratio: 13/9) { /* portrait styles here</p>
+<p>The Android simulator in Android studio is incredibly slow, thus remote-debugging may be your best option with actual devices on hand:</p>
+<p><a href="https://developer.chrome.com/devtools/docs/remote-debugging">https://developer.chrome.com/devtools/docs/remote-debugging</a></p>
+<p>Sources:</p>
+<p><a href="http://robandlauren.com/2014/04/03/aspect-ratio-media-queries/">http://robandlauren.com/2014/04/03/aspect-ratio-media-queries/</a></p>
+<p><a href="http://blog.abouthalf.com/development/orientation-media-query-challenges-in-android-browsers/">http://blog.abouthalf.com/development/orientation-media-query-challenges-in-android-browsers/</a></p>
+</p>
+				<hr>
+
+			</div>
+
+			<div class="col-sm-4">
+				<!-- Search -->
+				<div class="well">
+					<h4 class="margin-t-0">Search</h4>
+					<form action="#">
+						<div class="input-group">
+							<label class="sr-only" for="search-form">Search the site</label>
+							<input type="text" class="form-control" id="search-form">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">
+									<span class="glyphicon glyphicon-search"></span>
+									<span class="sr-only">Search</span>
+								</button>
+							</span>
+						</div>
+					</form>
+				</div>
+			
+				<!-- list group -->
+				<div class="list-group margin-b-3">
+					<a href="#" class="active list-group-item">Category 1</a>
+					<a href="#" class="list-group-item">Category 2</a>
+					<a href="#" class="list-group-item">Category 3</a>
+				</div>
+			
+				<!-- Panel -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">Sidebar panel widget</h4>
+					</div>
+					<div class="panel-body">
+						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+			
+				<!-- Panel -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">Sidebar panel widget</h4>
+					</div>
+					<div class="panel-body">
+						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+			
+			</div>
+
+		</div>
+
+<footer class="margin-tb-3">
+	<div class="row">
+		<div class="col-lg-12">
+			<p>Copyright &copy; Karianne Burns 2015</p>
+		</div>
+	</div>
+</footer>
