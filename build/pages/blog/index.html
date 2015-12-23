@@ -1,7 +1,92 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Meu Blog</title>
+	<link rel="stylesheet" href="http://localhost:8080/styles/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost:8080/styles/style.css">
+  </head>
+  <body>
+    <header>
+		<!-- Navigation -->
+	    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container-fluid">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Sitename</a>
+				</div>
+				<!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Nav item 1</a></li>
+						<li><a href="#">Nav item 2</a></li>
+						<li><a href="#">Nav item 3</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- /.navbar -->
+
+    </header>
 <h2>Blog</h2>
 
 <article>
     <ul>
+            <li>
+                <h3>Android Mobile</h3>
+                <article>&lt;p&gt;Horizontal to Vertical:
+Width/ Height:&lt;/p&gt;
+&lt;p&gt;Aspect Ratio Media Queries like landscape and portrait are used to test the width of the display. However what if need to target unusual behavior with window resizing?
+Aspect ratios are represented by the horizontal ratio and the vertical ratio, with two numbers like this 4:3, CSS uses 4/3.&lt;/p&gt;
+&lt;p&gt;To test for landscape media, could do the following:
+@media screen and (min-aspect-ratio: 1/1) { /* landscape styles here
+This just means “whenever the width is greater than the height, apply these styles”, width is top number, horizontal.&lt;/p&gt;
+&lt;p&gt;To test for portrait:
+@media screen and (max-aspect-ratio: 1/1) { /* portrait styles here
+Which means “whenever the width is less than the height, apply these styles”, height is bottom number;&lt;/p&gt;
+&lt;p&gt;To test for&lt;/p&gt;
+&lt;p&gt;The media query describes the aspect ratio of the targeted display area of the device/window. If the screen is within the bounds of the denoted ratio, the query will go into effect.&lt;/p&gt;
+&lt;p&gt;@media screen and (min-aspect-ratio: 8/5){…} Describes the aspect ratio of the of the targeted display area.
+@media screen and (min-device-aspect-ratio: 8/5) Describes the physical aspect ratio of the screen itself.&lt;/p&gt;
+&lt;p&gt;If the window aspect is 8:5 or higher, call this css (8:4, 8:3);&lt;/p&gt;
+&lt;p&gt;Issue with Chrome for Android: When the software keyboard is displayed, the browser window is resized, and a window.orientenationchange event in JavaScript, causing CSS media queries to be applied.&lt;/p&gt;
+&lt;p&gt;Web apps with a different layout for portrait and landscape orientation can break when keyboard is displayed. When the keyboard is displayed, Droid can go from 360px wide by 640px tall to 360px by 253px when the keyboard is displayed; This makes the screen size appear to the browser to be slightly square landscape orientation.&lt;/p&gt;
+&lt;p&gt;Now orientation: landscape media queries apply and break the layout.
+We need to capture the weird keyboard edge case:
+The orientation of the Droid screen in portrait orientation when the keyboard displayed is 360 by 253: 1.4, use 13/9&lt;/p&gt;
+&lt;p&gt;For landscape media:&lt;/p&gt;
+&lt;p&gt;@media screen and (min-aspect-ratio: 13/9) { /* landscape styles here &lt;/p&gt;
+&lt;p&gt;And for portrait media:&lt;/p&gt;
+&lt;p&gt;@media screen and (max-aspect-ratio: 13/9) { /* portrait styles here&lt;/p&gt;
+&lt;p&gt;&amp;quot;anything that is portrait-to-slightly-landscape gets the portrait styles, anything wider gets landscape styles”.&lt;/p&gt;
+&lt;p&gt;Only shows up when you have highly precise portrait and landscape layout for a website or app which require a text entry in a form field, breaks your layout.&lt;/p&gt;
+&lt;p&gt;Moto X pure edition:
+1440 x 2560 pixels&lt;/p&gt;
+&lt;p&gt;Moto 2nd generation
+1080 x 1920 pixels&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;http://robandlauren.com/2014/04/03/aspect-ratio-media-queries/&quot;&gt;http://robandlauren.com/2014/04/03/aspect-ratio-media-queries/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;http://blog.abouthalf.com/development/orientation-media-query-challenges-in-android-browsers/&quot;&gt;http://blog.abouthalf.com/development/orientation-media-query-challenges-in-android-browsers/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://developer.chrome.com/devtools/docs/remote-debugging&quot;&gt;https://developer.chrome.com/devtools/docs/remote-debugging&lt;/a&gt;&lt;/p&gt;
+</article>
+            </li>
     </ul>
 </article>
 
+<footer class="margin-tb-3">
+	<div class="row">
+		<div class="col-lg-12">
+			<p>Copyright &copy; Karianne Burns 2015</p>
+		</div>
+	</div>
+</footer>

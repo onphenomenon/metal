@@ -8,10 +8,17 @@ var Metalsmith = require('metalsmith'),
 	Handlebars = require('handlebars'),
 	collections = require('metalsmith-collections'),
     permalinks  = require('metalsmith-permalinks'),
-	fs = require('fs');
+	fs = require('fs'),
+	baseUrl = 'http://localhost:8080';
 
-Handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
-Handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
+Handlebars.registerPartial({
+	'header': fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString(),
+	'footer': fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString(),
+	'sidebar': fs.readFileSync(__dirname + '/templates/partials/sidebar.hbt').toString()
+})
+Handlebars.registerHelper('baseUrl', function() {
+  return baseUrl;
+});
 
 var plugin = function(files, metalsmith, done) {
     console.log(files);
