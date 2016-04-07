@@ -18,8 +18,8 @@
 
 				<!-- Image -->
 				<figure class="margin-b-2">
-					<img class="img-responsive" src="{{baseUrl}}/images/Headache.jpg" alt="">
-					<figcaption class="margin-t-h">Dealing with mobile native browser issues.</figcaption>
+					<img class="img-responsive" src="{{baseUrl}}{{image}}" alt="">
+					<!-- <figcaption class="margin-t-h">{{caption}}</figcaption> -->
 				</figure>
 
 				<p class="lead">{{{contents}}}</p>

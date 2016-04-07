@@ -76,3 +76,12 @@ body { padding-top: 70px; }
 	margin-top: 3em;
 	margin-bottom: 3em;
 }
+.img-responsive {
+	display: inline-block;
+	width: 50%;
+	float: right;
+	padding: 15px;
+}
+.container-fluid {
+	padding-left: 75px;
+}

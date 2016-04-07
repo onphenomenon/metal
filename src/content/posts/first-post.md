@@ -2,6 +2,7 @@
 title: Android Mobile Browser
 author: Karianne Burns
 template: post.hbt
+image: /images/squash-bug.gif
 ---
 
 Recently, a nasty Android native bug appeared in our mobile application. Whenever the user tried to enter text and a keyboard popped out, the landscape media queries were triggered, because the browser would automatically resize. Normal landscape and portrait media queries were not sufficient to targeting the behavior of the screen.
