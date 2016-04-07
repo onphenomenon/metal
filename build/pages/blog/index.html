@@ -1,7 +1,589 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SkaReDevBlog</title>
+	<link rel="stylesheet" href="http://localhost:8080/styles/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost:8080/styles/style.css">
+  </head>
+  <body>
+    <header>
+		<!-- Navigation -->
+	    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container-fluid">
+
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">SkaRe DevBlog</a>
+				</div>
+				<!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Front-End</a></li>
+						<li><a href="#">Back-end</a></li>
+						<li><a href="#">Database</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+		<!-- /.navbar -->
+
+    </header>
 <h2>Blog</h2>
 
 <article>
     <ul>
+            <li>
+                <h3>Angular Filter Directive</h3>
+                <article>&lt;!DOCTYPE html&gt;
+  &lt;html lang&#x3D;&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+    &lt;title&gt;SkaReDevBlog&lt;/title&gt;
+	&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;http://localhost:8080/styles/bootstrap.css&quot;&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;http://localhost:8080/styles/style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+		&lt;!-- Navigation --&gt;
+	    &lt;nav class&#x3D;&quot;navbar navbar-fixed-top navbar-inverse&quot; role&#x3D;&quot;navigation&quot;&gt;
+			&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+
+				&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+				&lt;div class&#x3D;&quot;navbar-header&quot;&gt;
+					&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;navbar-toggle collapsed&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#bs-example-navbar-collapse-1&quot;&gt;
+						&lt;span class&#x3D;&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+					&lt;/button&gt;
+					&lt;a class&#x3D;&quot;navbar-brand&quot; href&#x3D;&quot;#&quot;&gt;SkaRe DevBlog&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;!-- /.navbar-header --&gt;
+
+				&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+				&lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;bs-example-navbar-collapse-1&quot;&gt;
+					&lt;ul class&#x3D;&quot;nav navbar-nav&quot;&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Front-End&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Back-end&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Database&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- /.navbar-collapse --&gt;
+			&lt;/div&gt;
+			&lt;!-- /.container-fluid --&gt;
+		&lt;/nav&gt;
+		&lt;!-- /.navbar --&gt;
+
+    &lt;/header&gt;
+&lt;!-- Page Content --&gt;
+	&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
+				&lt;div class&#x3D;&quot;page-header&quot;&gt;
+					&lt;h1&gt;Angular Filter Directive&lt;/h1&gt;
+					&lt;p&gt;Posted by &lt;span class&#x3D;&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt; &lt;a href&#x3D;&quot;#&quot;&gt;Karianne Burns&lt;/a&gt; on &lt;span class&#x3D;&quot;glyphicon glyphicon-time&quot;&gt;&lt;/span&gt; 12 January 2015 10:00 am&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+
+		&lt;!-- /.row --&gt;
+
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-sm-8&quot;&gt;
+
+				&lt;!-- Image --&gt;
+				&lt;figure class&#x3D;&quot;margin-b-2&quot;&gt;
+					&lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;http://localhost:8080&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;!-- &lt;figcaption class&#x3D;&quot;margin-t-h&quot;&gt;&lt;/figcaption&gt; --&gt;
+				&lt;/figure&gt;
+
+				&lt;p class&#x3D;&quot;lead&quot;&gt;&lt;/p&gt;
+				&lt;hr&gt;
+
+			&lt;/div&gt;
+
+			&lt;div class&#x3D;&quot;col-sm-4&quot;&gt;
+				&lt;!-- Search --&gt;
+				&lt;div class&#x3D;&quot;well&quot;&gt;
+					&lt;h4 class&#x3D;&quot;margin-t-0&quot;&gt;Search&lt;/h4&gt;
+					&lt;form action&#x3D;&quot;#&quot;&gt;
+						&lt;div class&#x3D;&quot;input-group&quot;&gt;
+							&lt;label class&#x3D;&quot;sr-only&quot; for&#x3D;&quot;search-form&quot;&gt;Search the site&lt;/label&gt;
+							&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;search-form&quot;&gt;
+							&lt;span class&#x3D;&quot;input-group-btn&quot;&gt;
+								&lt;button class&#x3D;&quot;btn btn-default&quot; type&#x3D;&quot;button&quot;&gt;
+									&lt;span class&#x3D;&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;
+									&lt;span class&#x3D;&quot;sr-only&quot;&gt;Search&lt;/span&gt;
+								&lt;/button&gt;
+							&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/form&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- list group --&gt;
+				&lt;div class&#x3D;&quot;list-group margin-b-3&quot;&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;active list-group-item&quot;&gt;Category 1&lt;/a&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-group-item&quot;&gt;Category 2&lt;/a&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-group-item&quot;&gt;Category 3&lt;/a&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- Panel --&gt;
+				&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+					&lt;div class&#x3D;&quot;panel-heading&quot;&gt;
+						&lt;h4 class&#x3D;&quot;panel-title&quot;&gt;Sidebar panel widget&lt;/h4&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;panel-body&quot;&gt;
+						&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- Panel --&gt;
+				&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+					&lt;div class&#x3D;&quot;panel-heading&quot;&gt;
+						&lt;h4 class&#x3D;&quot;panel-title&quot;&gt;Sidebar panel widget&lt;/h4&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;panel-body&quot;&gt;
+						&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+
+&lt;footer class&#x3D;&quot;margin-tb-3&quot;&gt;
+	&lt;div class&#x3D;&quot;row&quot;&gt;
+		&lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+			&lt;p&gt;Copyright &amp;copy; Karianne Burns 2015&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;
+</article>
+            </li>
+            <li>
+                <h3>Passing Scope with TypeScript</h3>
+                <article>&lt;!DOCTYPE html&gt;
+  &lt;html lang&#x3D;&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+    &lt;title&gt;SkaReDevBlog&lt;/title&gt;
+	&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;http://localhost:8080/styles/bootstrap.css&quot;&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;http://localhost:8080/styles/style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+		&lt;!-- Navigation --&gt;
+	    &lt;nav class&#x3D;&quot;navbar navbar-fixed-top navbar-inverse&quot; role&#x3D;&quot;navigation&quot;&gt;
+			&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+
+				&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+				&lt;div class&#x3D;&quot;navbar-header&quot;&gt;
+					&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;navbar-toggle collapsed&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#bs-example-navbar-collapse-1&quot;&gt;
+						&lt;span class&#x3D;&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+					&lt;/button&gt;
+					&lt;a class&#x3D;&quot;navbar-brand&quot; href&#x3D;&quot;#&quot;&gt;SkaRe DevBlog&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;!-- /.navbar-header --&gt;
+
+				&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+				&lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;bs-example-navbar-collapse-1&quot;&gt;
+					&lt;ul class&#x3D;&quot;nav navbar-nav&quot;&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Front-End&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Back-end&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Database&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- /.navbar-collapse --&gt;
+			&lt;/div&gt;
+			&lt;!-- /.container-fluid --&gt;
+		&lt;/nav&gt;
+		&lt;!-- /.navbar --&gt;
+
+    &lt;/header&gt;
+&lt;!-- Page Content --&gt;
+	&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
+				&lt;div class&#x3D;&quot;page-header&quot;&gt;
+					&lt;h1&gt;Passing Scope with TypeScript&lt;/h1&gt;
+					&lt;p&gt;Posted by &lt;span class&#x3D;&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt; &lt;a href&#x3D;&quot;#&quot;&gt;Karianne Burns&lt;/a&gt; on &lt;span class&#x3D;&quot;glyphicon glyphicon-time&quot;&gt;&lt;/span&gt; 12 January 2015 10:00 am&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+
+		&lt;!-- /.row --&gt;
+
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-sm-8&quot;&gt;
+
+				&lt;!-- Image --&gt;
+				&lt;figure class&#x3D;&quot;margin-b-2&quot;&gt;
+					&lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;http://localhost:8080&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;!-- &lt;figcaption class&#x3D;&quot;margin-t-h&quot;&gt;&lt;/figcaption&gt; --&gt;
+				&lt;/figure&gt;
+
+				&lt;p class&#x3D;&quot;lead&quot;&gt;&lt;/p&gt;
+				&lt;hr&gt;
+
+			&lt;/div&gt;
+
+			&lt;div class&#x3D;&quot;col-sm-4&quot;&gt;
+				&lt;!-- Search --&gt;
+				&lt;div class&#x3D;&quot;well&quot;&gt;
+					&lt;h4 class&#x3D;&quot;margin-t-0&quot;&gt;Search&lt;/h4&gt;
+					&lt;form action&#x3D;&quot;#&quot;&gt;
+						&lt;div class&#x3D;&quot;input-group&quot;&gt;
+							&lt;label class&#x3D;&quot;sr-only&quot; for&#x3D;&quot;search-form&quot;&gt;Search the site&lt;/label&gt;
+							&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;search-form&quot;&gt;
+							&lt;span class&#x3D;&quot;input-group-btn&quot;&gt;
+								&lt;button class&#x3D;&quot;btn btn-default&quot; type&#x3D;&quot;button&quot;&gt;
+									&lt;span class&#x3D;&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;
+									&lt;span class&#x3D;&quot;sr-only&quot;&gt;Search&lt;/span&gt;
+								&lt;/button&gt;
+							&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/form&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- list group --&gt;
+				&lt;div class&#x3D;&quot;list-group margin-b-3&quot;&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;active list-group-item&quot;&gt;Category 1&lt;/a&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-group-item&quot;&gt;Category 2&lt;/a&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-group-item&quot;&gt;Category 3&lt;/a&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- Panel --&gt;
+				&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+					&lt;div class&#x3D;&quot;panel-heading&quot;&gt;
+						&lt;h4 class&#x3D;&quot;panel-title&quot;&gt;Sidebar panel widget&lt;/h4&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;panel-body&quot;&gt;
+						&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- Panel --&gt;
+				&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+					&lt;div class&#x3D;&quot;panel-heading&quot;&gt;
+						&lt;h4 class&#x3D;&quot;panel-title&quot;&gt;Sidebar panel widget&lt;/h4&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;panel-body&quot;&gt;
+						&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+
+&lt;footer class&#x3D;&quot;margin-tb-3&quot;&gt;
+	&lt;div class&#x3D;&quot;row&quot;&gt;
+		&lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+			&lt;p&gt;Copyright &amp;copy; Karianne Burns 2015&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;
+</article>
+            </li>
+            <li>
+                <h3>Testing an Angular Directive</h3>
+                <article>&lt;!DOCTYPE html&gt;
+  &lt;html lang&#x3D;&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+    &lt;title&gt;SkaReDevBlog&lt;/title&gt;
+	&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;http://localhost:8080/styles/bootstrap.css&quot;&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;http://localhost:8080/styles/style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+		&lt;!-- Navigation --&gt;
+	    &lt;nav class&#x3D;&quot;navbar navbar-fixed-top navbar-inverse&quot; role&#x3D;&quot;navigation&quot;&gt;
+			&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+
+				&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+				&lt;div class&#x3D;&quot;navbar-header&quot;&gt;
+					&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;navbar-toggle collapsed&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#bs-example-navbar-collapse-1&quot;&gt;
+						&lt;span class&#x3D;&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+					&lt;/button&gt;
+					&lt;a class&#x3D;&quot;navbar-brand&quot; href&#x3D;&quot;#&quot;&gt;SkaRe DevBlog&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;!-- /.navbar-header --&gt;
+
+				&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+				&lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;bs-example-navbar-collapse-1&quot;&gt;
+					&lt;ul class&#x3D;&quot;nav navbar-nav&quot;&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Front-End&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Back-end&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Database&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- /.navbar-collapse --&gt;
+			&lt;/div&gt;
+			&lt;!-- /.container-fluid --&gt;
+		&lt;/nav&gt;
+		&lt;!-- /.navbar --&gt;
+
+    &lt;/header&gt;
+&lt;!-- Page Content --&gt;
+	&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
+				&lt;div class&#x3D;&quot;page-header&quot;&gt;
+					&lt;h1&gt;Testing an Angular Directive&lt;/h1&gt;
+					&lt;p&gt;Posted by &lt;span class&#x3D;&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt; &lt;a href&#x3D;&quot;#&quot;&gt;Karianne Burns&lt;/a&gt; on &lt;span class&#x3D;&quot;glyphicon glyphicon-time&quot;&gt;&lt;/span&gt; 12 January 2015 10:00 am&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+
+		&lt;!-- /.row --&gt;
+
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-sm-8&quot;&gt;
+
+				&lt;!-- Image --&gt;
+				&lt;figure class&#x3D;&quot;margin-b-2&quot;&gt;
+					&lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;http://localhost:8080&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;!-- &lt;figcaption class&#x3D;&quot;margin-t-h&quot;&gt;&lt;/figcaption&gt; --&gt;
+				&lt;/figure&gt;
+
+				&lt;p class&#x3D;&quot;lead&quot;&gt;&lt;/p&gt;
+				&lt;hr&gt;
+
+			&lt;/div&gt;
+
+			&lt;div class&#x3D;&quot;col-sm-4&quot;&gt;
+				&lt;!-- Search --&gt;
+				&lt;div class&#x3D;&quot;well&quot;&gt;
+					&lt;h4 class&#x3D;&quot;margin-t-0&quot;&gt;Search&lt;/h4&gt;
+					&lt;form action&#x3D;&quot;#&quot;&gt;
+						&lt;div class&#x3D;&quot;input-group&quot;&gt;
+							&lt;label class&#x3D;&quot;sr-only&quot; for&#x3D;&quot;search-form&quot;&gt;Search the site&lt;/label&gt;
+							&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;search-form&quot;&gt;
+							&lt;span class&#x3D;&quot;input-group-btn&quot;&gt;
+								&lt;button class&#x3D;&quot;btn btn-default&quot; type&#x3D;&quot;button&quot;&gt;
+									&lt;span class&#x3D;&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;
+									&lt;span class&#x3D;&quot;sr-only&quot;&gt;Search&lt;/span&gt;
+								&lt;/button&gt;
+							&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/form&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- list group --&gt;
+				&lt;div class&#x3D;&quot;list-group margin-b-3&quot;&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;active list-group-item&quot;&gt;Category 1&lt;/a&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-group-item&quot;&gt;Category 2&lt;/a&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-group-item&quot;&gt;Category 3&lt;/a&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- Panel --&gt;
+				&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+					&lt;div class&#x3D;&quot;panel-heading&quot;&gt;
+						&lt;h4 class&#x3D;&quot;panel-title&quot;&gt;Sidebar panel widget&lt;/h4&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;panel-body&quot;&gt;
+						&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- Panel --&gt;
+				&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+					&lt;div class&#x3D;&quot;panel-heading&quot;&gt;
+						&lt;h4 class&#x3D;&quot;panel-title&quot;&gt;Sidebar panel widget&lt;/h4&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;panel-body&quot;&gt;
+						&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+
+&lt;footer class&#x3D;&quot;margin-tb-3&quot;&gt;
+	&lt;div class&#x3D;&quot;row&quot;&gt;
+		&lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+			&lt;p&gt;Copyright &amp;copy; Karianne Burns 2015&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;
+</article>
+            </li>
+            <li>
+                <h3>Android Mobile Browser</h3>
+                <article>&lt;!DOCTYPE html&gt;
+  &lt;html lang&#x3D;&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;
+    &lt;title&gt;SkaReDevBlog&lt;/title&gt;
+	&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;http://localhost:8080/styles/bootstrap.css&quot;&gt;
+    &lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;http://localhost:8080/styles/style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+		&lt;!-- Navigation --&gt;
+	    &lt;nav class&#x3D;&quot;navbar navbar-fixed-top navbar-inverse&quot; role&#x3D;&quot;navigation&quot;&gt;
+			&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+
+				&lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+				&lt;div class&#x3D;&quot;navbar-header&quot;&gt;
+					&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;navbar-toggle collapsed&quot; data-toggle&#x3D;&quot;collapse&quot; data-target&#x3D;&quot;#bs-example-navbar-collapse-1&quot;&gt;
+						&lt;span class&#x3D;&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+						&lt;span class&#x3D;&quot;icon-bar&quot;&gt;&lt;/span&gt;
+					&lt;/button&gt;
+					&lt;a class&#x3D;&quot;navbar-brand&quot; href&#x3D;&quot;#&quot;&gt;SkaRe DevBlog&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;!-- /.navbar-header --&gt;
+
+				&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+				&lt;div class&#x3D;&quot;collapse navbar-collapse&quot; id&#x3D;&quot;bs-example-navbar-collapse-1&quot;&gt;
+					&lt;ul class&#x3D;&quot;nav navbar-nav&quot;&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Front-End&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Back-end&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href&#x3D;&quot;#&quot;&gt;Database&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/div&gt;
+				&lt;!-- /.navbar-collapse --&gt;
+			&lt;/div&gt;
+			&lt;!-- /.container-fluid --&gt;
+		&lt;/nav&gt;
+		&lt;!-- /.navbar --&gt;
+
+    &lt;/header&gt;
+&lt;!-- Page Content --&gt;
+	&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-sm-12&quot;&gt;
+				&lt;div class&#x3D;&quot;page-header&quot;&gt;
+					&lt;h1&gt;Android Mobile Browser&lt;/h1&gt;
+					&lt;p&gt;Posted by &lt;span class&#x3D;&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt; &lt;a href&#x3D;&quot;#&quot;&gt;Karianne Burns&lt;/a&gt; on &lt;span class&#x3D;&quot;glyphicon glyphicon-time&quot;&gt;&lt;/span&gt; 12 January 2015 10:00 am&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+
+		&lt;!-- /.row --&gt;
+
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-sm-8&quot;&gt;
+
+				&lt;!-- Image --&gt;
+				&lt;figure class&#x3D;&quot;margin-b-2&quot;&gt;
+					&lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;http://localhost:8080/images/squash-bug.gif&quot; alt&#x3D;&quot;&quot;&gt;
+					&lt;!-- &lt;figcaption class&#x3D;&quot;margin-t-h&quot;&gt;&lt;/figcaption&gt; --&gt;
+				&lt;/figure&gt;
+
+				&lt;p class&#x3D;&quot;lead&quot;&gt;&lt;p&gt;Recently, a nasty Android native bug appeared in our mobile application. Whenever the user tried to enter text and a keyboard popped out, the landscape media queries were triggered, because the browser would automatically resize. Normal landscape and portrait media queries were not sufficient to targeting the behavior of the screen.&lt;/p&gt;
+&lt;p&gt;Media queries like landscape and portrait are used for responsive layouts. The queries test the width of the display. If you need to target unusual behavior with window resizing its helpful to understand the aspect ratios these queries are targeting.&lt;/p&gt;
+&lt;p&gt;Aspect ratios are represented by two numbers in a fraction or separated by a colon. The numerator (top number) is the width or horizontal size, the denominator is the height or vertical size.&lt;/p&gt;
+&lt;p&gt;A landscape aspect ratio tests for a minimum aspect ratio of 1/1, meaning that when the width is greater than the height, landscape styles are applied. The landscape ratio reduces to at least 1.&lt;/p&gt;
+&lt;p&gt;@media screen and (min-aspect-ratio: 1/1) { /* landscape styles here&lt;/p&gt;
+&lt;p&gt;A portrait aspect ratio tests for a maximum aspect ratio of 1/1, meaning that whenever the width is less than the height, portrait style are applied. The portrait ratio reduces to less than 1.&lt;/p&gt;
+&lt;p&gt;@media screen and (max-aspect-ratio: 1/1) { /* portrait styles here&lt;/p&gt;
+&lt;p&gt;Now back to the issue with Chrome for Android. Normal portrait for the Android Moto X (2nd generation) was 360px/556px, or .64. When the keyboard entered, the browser size went to 360px/282px, or 1.27. Thus the landscape styles were applied, as the aspect ratio was greater than 1.&lt;/p&gt;
+&lt;p&gt;To capture this keyboard edge case and maintain portrait styles, we need a higher min-aspect-ratio than 1. 13/9 as an aspect ratio reduces to 1.4, so it should cover the 1.27 edge case.&lt;/p&gt;
+&lt;p&gt;So for landscape media:&lt;/p&gt;
+&lt;p&gt;@media screen and (min-aspect-ratio: 13/9) { /* landscape styles here&lt;/p&gt;
+&lt;p&gt;And for portrait media:&lt;/p&gt;
+&lt;p&gt;@media screen and (max-aspect-ratio: 13/9) { /* portrait styles here&lt;/p&gt;
+&lt;p&gt;The Android simulator in Android studio is incredibly slow, thus remote-debugging may be your best option with actual devices on hand:&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://developer.chrome.com/devtools/docs/remote-debugging&quot;&gt;https://developer.chrome.com/devtools/docs/remote-debugging&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sources:&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;http://robandlauren.com/2014/04/03/aspect-ratio-media-queries/&quot;&gt;http://robandlauren.com/2014/04/03/aspect-ratio-media-queries/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;http://blog.abouthalf.com/development/orientation-media-query-challenges-in-android-browsers/&quot;&gt;http://blog.abouthalf.com/development/orientation-media-query-challenges-in-android-browsers/&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;
+				&lt;hr&gt;
+
+			&lt;/div&gt;
+
+			&lt;div class&#x3D;&quot;col-sm-4&quot;&gt;
+				&lt;!-- Search --&gt;
+				&lt;div class&#x3D;&quot;well&quot;&gt;
+					&lt;h4 class&#x3D;&quot;margin-t-0&quot;&gt;Search&lt;/h4&gt;
+					&lt;form action&#x3D;&quot;#&quot;&gt;
+						&lt;div class&#x3D;&quot;input-group&quot;&gt;
+							&lt;label class&#x3D;&quot;sr-only&quot; for&#x3D;&quot;search-form&quot;&gt;Search the site&lt;/label&gt;
+							&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;search-form&quot;&gt;
+							&lt;span class&#x3D;&quot;input-group-btn&quot;&gt;
+								&lt;button class&#x3D;&quot;btn btn-default&quot; type&#x3D;&quot;button&quot;&gt;
+									&lt;span class&#x3D;&quot;glyphicon glyphicon-search&quot;&gt;&lt;/span&gt;
+									&lt;span class&#x3D;&quot;sr-only&quot;&gt;Search&lt;/span&gt;
+								&lt;/button&gt;
+							&lt;/span&gt;
+						&lt;/div&gt;
+					&lt;/form&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- list group --&gt;
+				&lt;div class&#x3D;&quot;list-group margin-b-3&quot;&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;active list-group-item&quot;&gt;Category 1&lt;/a&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-group-item&quot;&gt;Category 2&lt;/a&gt;
+					&lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;list-group-item&quot;&gt;Category 3&lt;/a&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- Panel --&gt;
+				&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+					&lt;div class&#x3D;&quot;panel-heading&quot;&gt;
+						&lt;h4 class&#x3D;&quot;panel-title&quot;&gt;Sidebar panel widget&lt;/h4&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;panel-body&quot;&gt;
+						&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			
+				&lt;!-- Panel --&gt;
+				&lt;div class&#x3D;&quot;panel panel-default&quot;&gt;
+					&lt;div class&#x3D;&quot;panel-heading&quot;&gt;
+						&lt;h4 class&#x3D;&quot;panel-title&quot;&gt;Sidebar panel widget&lt;/h4&gt;
+					&lt;/div&gt;
+					&lt;div class&#x3D;&quot;panel-body&quot;&gt;
+						&lt;p&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+
+&lt;footer class&#x3D;&quot;margin-tb-3&quot;&gt;
+	&lt;div class&#x3D;&quot;row&quot;&gt;
+		&lt;div class&#x3D;&quot;col-lg-12&quot;&gt;
+			&lt;p&gt;Copyright &amp;copy; Karianne Burns 2015&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/footer&gt;
+</article>
+            </li>
     </ul>
 </article>
 
+<footer class="margin-tb-3">
+	<div class="row">
+		<div class="col-lg-12">
+			<p>Copyright &copy; Karianne Burns 2015</p>
+		</div>
+	</div>
+</footer>
